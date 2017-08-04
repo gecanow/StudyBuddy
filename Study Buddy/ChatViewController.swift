@@ -8,6 +8,7 @@
 
 import UIKit
 import Firebase
+import FirebaseDatabase
 import JSQMessagesViewController
 
 class ChatViewController: JSQMessagesViewController {
@@ -16,5 +17,8 @@ class ChatViewController: JSQMessagesViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        self.senderDisplayName = Auth.auth().currentUser?.displayName
+        self.senderId = Auth.auth().currentUser?.uid
     }
 }
