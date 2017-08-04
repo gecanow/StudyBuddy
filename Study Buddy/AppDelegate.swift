@@ -61,9 +61,11 @@ class AppDelegate: UIResponder, UIApplicationDelegate, GIDSignInDelegate {
                     {
                         self.ref.child("user").child(user!.uid).child("name").setValue(user?.displayName)
                         self.ref.child("user").child(user!.uid).child("email").setValue(user?.email)
+                        self.ref.child("user").child(user!.uid).child("userid").setValue(user?.uid)
+                        self.ref.child("chatChannel").child(user!.uid).child("name").setValue(user?.displayName)
                     }
                 
-                    let mainStoryboard = UIStoryboard(name:"Main", bundle: nil)
+                    //let mainStoryboard = UIStoryboard(name:"Main", bundle: nil)
                     self.window?.rootViewController?.performSegue(withIdentifier: "StudyRoomSegue", sender: nil)
                 
                 })

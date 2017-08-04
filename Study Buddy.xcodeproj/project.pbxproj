@@ -11,6 +11,8 @@
 		716C63BFEC4B660282E1F459 /* Pods_Study_BuddyUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BADF2D9EF5E8C967CA7B4A02 /* Pods_Study_BuddyUITests.framework */; };
 		886A462C1F32DD9F00A4277E /* ProfileViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 886A462B1F32DD9F00A4277E /* ProfileViewController.swift */; };
 		886A462E1F33F3CB00A4277E /* ChatViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 886A462D1F33F3CB00A4277E /* ChatViewController.swift */; };
+		886A46301F341C2000A4277E /* FindBuddiesViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 886A462F1F341C2000A4277E /* FindBuddiesViewController.swift */; };
+		886A46321F341E1700A4277E /* Buddy.swift in Sources */ = {isa = PBXBuildFile; fileRef = 886A46311F341E1700A4277E /* Buddy.swift */; };
 		88D624CC1F2ECF890068B497 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 88D624CB1F2ECF890068B497 /* AppDelegate.swift */; };
 		88D624CE1F2ECF890068B497 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 88D624CD1F2ECF890068B497 /* ViewController.swift */; };
 		88D624D11F2ECF890068B497 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 88D624CF1F2ECF890068B497 /* Main.storyboard */; };
@@ -49,6 +51,8 @@
 		7FD5E9C4111A12A1F089F7A7 /* Pods-Study BuddyUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Study BuddyUITests.release.xcconfig"; path = "Pods/Target Support Files/Pods-Study BuddyUITests/Pods-Study BuddyUITests.release.xcconfig"; sourceTree = "<group>"; };
 		886A462B1F32DD9F00A4277E /* ProfileViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ProfileViewController.swift; sourceTree = "<group>"; };
 		886A462D1F33F3CB00A4277E /* ChatViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ChatViewController.swift; sourceTree = "<group>"; };
+		886A462F1F341C2000A4277E /* FindBuddiesViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FindBuddiesViewController.swift; sourceTree = "<group>"; };
+		886A46311F341E1700A4277E /* Buddy.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Buddy.swift; sourceTree = "<group>"; };
 		88D624C81F2ECF890068B497 /* Study Buddy.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Study Buddy.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		88D624CB1F2ECF890068B497 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		88D624CD1F2ECF890068B497 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -136,6 +140,8 @@
 				88D624CD1F2ECF890068B497 /* ViewController.swift */,
 				886A462B1F32DD9F00A4277E /* ProfileViewController.swift */,
 				886A462D1F33F3CB00A4277E /* ChatViewController.swift */,
+				886A462F1F341C2000A4277E /* FindBuddiesViewController.swift */,
+				886A46311F341E1700A4277E /* Buddy.swift */,
 				88D624CF1F2ECF890068B497 /* Main.storyboard */,
 				88D624D21F2ECF890068B497 /* Assets.xcassets */,
 				88D624D41F2ECF890068B497 /* LaunchScreen.storyboard */,
@@ -467,6 +473,8 @@
 				88D624CE1F2ECF890068B497 /* ViewController.swift in Sources */,
 				886A462E1F33F3CB00A4277E /* ChatViewController.swift in Sources */,
 				88D624CC1F2ECF890068B497 /* AppDelegate.swift in Sources */,
+				886A46321F341E1700A4277E /* Buddy.swift in Sources */,
+				886A46301F341C2000A4277E /* FindBuddiesViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
