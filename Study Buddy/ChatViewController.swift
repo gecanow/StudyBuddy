@@ -38,12 +38,23 @@ class ChatViewController: JSQMessagesViewController {
     func addViewOnTop() {
         let top = UIView(frame: CGRect(x: 0, y: 0, width: UIScreen.main.bounds.size.width, height: 70))
         top.backgroundColor = .cyan
-        let randomViewLabel = UILabel(frame: CGRect(x: 20, y: 10, width: 100, height: 16))
-        randomViewLabel.text = "Chat Room"
-        top.addSubview(randomViewLabel)
+        
+        let titleLabel = UILabel(frame: CGRect(x: 20, y: 10, width: 100, height: 16))
+        titleLabel.text = "Chat Room"
+        
+        let backButton = UIButton(frame: CGRect(x: 5, y: 5, width: 30, height: 20))
+        backButton.setTitle("< Back", for: .normal)
+        backButton.addTarget(self, action: #selector(onTappedBack), for: .touchUpInside)
+        
+        top.addSubview(titleLabel)
+        top.addSubview(backButton)
         view.addSubview(top)
         
         self.collectionView?.collectionViewLayout.sectionInset = UIEdgeInsets(top: 80, left: 0, bottom: 0, right: 0)
+    }
+    
+    func onTappedBack() {
+        self.performSegue(withIdentifier: "UnwindToStudyRoom", sender: self)
     }
     
     //=======================================

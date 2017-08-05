@@ -9,6 +9,7 @@
 /* Begin PBXBuildFile section */
 		34E740DC21E62DB18764C737 /* Pods_Study_BuddyTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 97FD1AE288788788A11E9853 /* Pods_Study_BuddyTests.framework */; };
 		716C63BFEC4B660282E1F459 /* Pods_Study_BuddyUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BADF2D9EF5E8C967CA7B4A02 /* Pods_Study_BuddyUITests.framework */; };
+		880032191F363B2F00ED1DA5 /* StudyRoomViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 880032181F363B2F00ED1DA5 /* StudyRoomViewController.swift */; };
 		886A462C1F32DD9F00A4277E /* ProfileViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 886A462B1F32DD9F00A4277E /* ProfileViewController.swift */; };
 		886A462E1F33F3CB00A4277E /* ChatViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 886A462D1F33F3CB00A4277E /* ChatViewController.swift */; };
 		886A46301F341C2000A4277E /* FindBuddiesViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 886A462F1F341C2000A4277E /* FindBuddiesViewController.swift */; };
@@ -49,6 +50,7 @@
 		2F242B4153A45C0D8DC21F3A /* Pods_Study_Buddy.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Study_Buddy.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		68F6A996F280E706437A8B3F /* Pods-Study BuddyUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Study BuddyUITests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Study BuddyUITests/Pods-Study BuddyUITests.debug.xcconfig"; sourceTree = "<group>"; };
 		7FD5E9C4111A12A1F089F7A7 /* Pods-Study BuddyUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Study BuddyUITests.release.xcconfig"; path = "Pods/Target Support Files/Pods-Study BuddyUITests/Pods-Study BuddyUITests.release.xcconfig"; sourceTree = "<group>"; };
+		880032181F363B2F00ED1DA5 /* StudyRoomViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = StudyRoomViewController.swift; sourceTree = "<group>"; };
 		886A462B1F32DD9F00A4277E /* ProfileViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ProfileViewController.swift; sourceTree = "<group>"; };
 		886A462D1F33F3CB00A4277E /* ChatViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ChatViewController.swift; sourceTree = "<group>"; };
 		886A462F1F341C2000A4277E /* FindBuddiesViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FindBuddiesViewController.swift; sourceTree = "<group>"; };
@@ -138,6 +140,7 @@
 			children = (
 				88D624CB1F2ECF890068B497 /* AppDelegate.swift */,
 				88D624CD1F2ECF890068B497 /* ViewController.swift */,
+				880032181F363B2F00ED1DA5 /* StudyRoomViewController.swift */,
 				886A462B1F32DD9F00A4277E /* ProfileViewController.swift */,
 				886A462D1F33F3CB00A4277E /* ChatViewController.swift */,
 				886A462F1F341C2000A4277E /* FindBuddiesViewController.swift */,
@@ -469,6 +472,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				880032191F363B2F00ED1DA5 /* StudyRoomViewController.swift in Sources */,
 				886A462C1F32DD9F00A4277E /* ProfileViewController.swift in Sources */,
 				88D624CE1F2ECF890068B497 /* ViewController.swift in Sources */,
 				886A462E1F33F3CB00A4277E /* ChatViewController.swift in Sources */,
