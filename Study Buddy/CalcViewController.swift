@@ -44,19 +44,42 @@ class CalcViewController: UIViewController {
         lastWasOperator = true
     }
     
-    @IBAction func tappedEquals(_ sender: Any) {
-        while equation.count > 1 {
-            equation = breakDownEquation(from: equation)
-        }
+    func updateText() {
         equationLabel.text = ""
         for part in equation { equationLabel.text = equationLabel.text! + part }
     }
     
-    @IBAction func breakDown(_ sender: Any) {
-        equation = breakDownEquation(from: equation)
+    @IBAction func tappedEquals(_ sender: Any) {
+        checkAndFix()
         
-        equationLabel.text = ""
-        for part in equation { equationLabel.text = equationLabel.text! + part }
+        while equation.count > 1 {
+            equation = breakDownEquation(from: equation)
+        }
+        updateText()
+    }
+    
+    @IBAction func breakDown(_ sender: Any) {
+        checkAndFix()
+        
+        equation = breakDownEquation(from: equation)
+        updateText()
+    }
+    
+    func checkAndFix() {
+        var numOpen = 0, numClosed = 0
+        for i in equation {
+            if i == "(" { numOpen+=1 }
+            if i == ")" { numClosed+=1 }
+        }
+        
+        let diff = abs(numOpen-numClosed)
+        if numOpen < numClosed {
+            for _ in 0..<diff { equation.insert("(", at: 0) }
+        } else if numClosed < numOpen {
+            for _ in 0..<diff { equation.insert(")", at: 0) }
+        } else {}
+        
+        updateText()
     }
     
     func breakDownEquation(from: [String]) -> [String] {

@@ -527,7 +527,7 @@
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                     </view>
                     <connections>
-                        <segue destination="xYL-RE-fG9" kind="unwind" unwindAction="unwindToFndBuddiesWithSegue:" id="MYf-lA-ajd"/>
+                        <segue destination="xYL-RE-fG9" kind="unwind" identifier="UnwindToBuddies" unwindAction="unwindToFndBuddiesWithSegue:" id="MYf-lA-ajd"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Owe-4M-LeV" userLabel="First Responder" sceneMemberID="firstResponder"/>
