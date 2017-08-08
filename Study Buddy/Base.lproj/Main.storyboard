@@ -89,8 +89,26 @@
                             <button opaque="NO" contentMode="scaleAspectFit" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="voy-yV-9FF">
                                 <rect key="frame" x="16" y="20" width="27" height="27"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <state key="normal" title="Button" image="settingsUnpressed"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="24"/>
+                                <state key="normal" title="📂"/>
                             </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="uGF-00-8dO">
+                                <rect key="frame" x="332" y="20" width="27" height="27"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="24"/>
+                                <state key="normal" title="📪"/>
+                                <connections>
+                                    <action selector="onTappedMailBox:" destination="XZ0-cC-bwU" eventType="touchUpInside" id="Xot-KN-y4t"/>
+                                </connections>
+                            </button>
+                            <label hidden="YES" opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Messages: 0" textAlignment="center" lineBreakMode="wordWrap" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="wYh-jA-pXU">
+                                <rect key="frame" x="207" y="28" width="124" height="37"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="backgroundColor" red="0.065146917880000002" green="0.26596554490000002" blue="0.2621038631" alpha="1" colorSpace="calibratedRGB"/>
+                                <fontDescription key="fontDescription" name="AvenirNextCondensed-Regular" family="Avenir Next Condensed" pointSize="14"/>
+                                <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <nil key="highlightedColor"/>
+                            </label>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                     </view>
@@ -99,6 +117,7 @@
                         <outlet property="bio" destination="7IQ-b1-7XF" id="2eB-YI-1Nc"/>
                         <outlet property="bioScrollView" destination="3zK-YY-jYa" id="FS4-9A-B4a"/>
                         <outlet property="email" destination="NXo-DU-RlQ" id="QrF-aQ-W0v"/>
+                        <outlet property="messagesLabel" destination="wYh-jA-pXU" id="tG6-7i-sRO"/>
                         <outlet property="name" destination="umN-0b-033" id="PfY-wj-VMy"/>
                         <outlet property="profileImage" destination="eUi-If-aC3" id="lUi-iT-e65"/>
                         <outlet property="role" destination="S2j-YX-eHV" id="zWe-0b-flv"/>
@@ -106,7 +125,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="USA-SC-1SR" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-436" y="1125"/>
+            <point key="canvasLocation" x="-436" y="1124.8875562218891"/>
         </scene>
         <!--Calc View Controller-->
         <scene sceneID="HP3-Ky-F2v">
@@ -519,6 +538,9 @@
                                         <state key="normal" title="Connect ☍">
                                             <color key="titleColor" red="0.065146917880000002" green="0.26596554490000002" blue="0.2621038631" alpha="1" colorSpace="calibratedRGB"/>
                                         </state>
+                                        <connections>
+                                            <action selector="onTappedConnect:" destination="bzJ-8F-d9K" eventType="touchUpInside" id="vEg-0o-Rr4"/>
+                                        </connections>
                                     </button>
                                 </subviews>
                                 <color key="backgroundColor" red="0.065146917880000002" green="0.26596554490000002" blue="0.2621038631" alpha="1" colorSpace="calibratedRGB"/>
@@ -568,9 +590,6 @@
                                                 </label>
                                             </subviews>
                                         </tableViewCellContentView>
-                                        <connections>
-                                            <segue destination="bzJ-8F-d9K" kind="showDetail" identifier="UnwindToBuddies" action="showViewController:sender:" id="uaY-CF-2Jz"/>
-                                        </connections>
                                     </tableViewCell>
                                 </prototypes>
                             </tableView>
@@ -611,6 +630,7 @@
                         <outlet property="buddySearchBar" destination="zL5-Lv-tUH" id="71N-Ca-Sgk"/>
                         <outlet property="buddyTableView" destination="efa-xq-WNJ" id="uey-45-uB9"/>
                         <segue destination="bGV-t1-bm6" kind="unwind" identifier="UnwindToStudyRoom" unwindAction="unwindToStudyRoomWithSegue:" id="aeH-zj-RHZ"/>
+                        <segue destination="bzJ-8F-d9K" kind="show" identifier="ToBuddyDetail" id="4Th-KD-DzK"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="IvV-OL-wJu" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -803,6 +823,5 @@
     <resources>
         <image name="defaultProfile" width="547" height="720"/>
         <image name="linkIcon" width="2000" height="2668"/>
-        <image name="settingsUnpressed" width="2000" height="2000"/>
     </resources>
 </document>

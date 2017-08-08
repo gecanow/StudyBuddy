@@ -18,6 +18,14 @@ class Buddy: NSObject {
     var lowercaseName : String!
     var email : String!
     
+    convenience init(bud: String) {
+        self.init()
+        id = bud
+        name = ""
+        lowercaseName = ""
+        email = ""
+    }
+    
     convenience init(bud: String, called: String, at: String) {
         self.init()
         self.id = bud

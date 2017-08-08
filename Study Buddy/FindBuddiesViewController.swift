@@ -15,6 +15,7 @@ class FindBuddiesViewController: UIViewController, UITableViewDelegate, UITableV
     
     var allBuddies = [Buddy]()
     var displayBuddies = [Buddy]()
+    var tappedBud = Buddy(bud: "")
     
     var ref = Database.database().reference()
     @IBOutlet weak var buddyTableView: UITableView!
@@ -48,6 +49,11 @@ class FindBuddiesViewController: UIViewController, UITableViewDelegate, UITableV
         cell.textLabel?.text = bud.name
         
         return cell
+    }
+    
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        tappedBud = displayBuddies[indexPath.row]
+        self.performSegue(withIdentifier: "ToBuddyDetail", sender: self)
     }
     
     func findAllBuddies() {
@@ -92,6 +98,11 @@ class FindBuddiesViewController: UIViewController, UITableViewDelegate, UITableV
     
     @IBAction func onTappedBack(_ sender: Any) {
         self.performSegue(withIdentifier: "UnwindToStudyRoom", sender: self)
+    }
+    
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        let dvc = segue.destination as! BuddyDetailViewController
+        dvc.bud = tappedBud
     }
     
     

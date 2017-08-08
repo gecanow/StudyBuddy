@@ -50,22 +50,22 @@ class CalcViewController: UIViewController {
     }
     
     @IBAction func tappedEquals(_ sender: Any) {
-        checkAndFix()
-        
-        while equation.count > 1 {
-            equation = breakDownEquation(from: equation)
+        if !hasAnError() {
+            while equation.count > 1 {
+                equation = breakDownEquation(from: equation)
+            }
         }
         updateText()
     }
     
     @IBAction func breakDown(_ sender: Any) {
-        checkAndFix()
-        
-        equation = breakDownEquation(from: equation)
+        if !hasAnError() {
+            equation = breakDownEquation(from: equation)
+        }
         updateText()
     }
     
-    func checkAndFix() {
+    func hasAnError() -> Bool {
         var numOpen = 0, numClosed = 0
         for i in equation {
             if i == "(" { numOpen+=1 }
@@ -73,13 +73,15 @@ class CalcViewController: UIViewController {
         }
         
         let diff = abs(numOpen-numClosed)
-        if numOpen < numClosed {
-            for _ in 0..<diff { equation.insert("(", at: 0) }
-        } else if numClosed < numOpen {
-            for _ in 0..<diff { equation.insert(")", at: 0) }
-        } else {}
-        
-        updateText()
+        if diff == 0 {
+            return false
+        } else {
+            for _ in 0..<diff {
+                if numOpen < numClosed { equation.insert("(", at: 0) }
+                else { equation.append(")") }
+            }
+            return true
+        }
     }
     
     func breakDownEquation(from: [String]) -> [String] {
