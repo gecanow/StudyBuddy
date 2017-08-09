@@ -26,6 +26,8 @@
 		88D624FC1F2ED2BF0068B497 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 88D624FB1F2ED2BF0068B497 /* GoogleService-Info.plist */; };
 		88D624FD1F2ED2BF0068B497 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 88D624FB1F2ED2BF0068B497 /* GoogleService-Info.plist */; };
 		88D624FE1F2ED2BF0068B497 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 88D624FB1F2ED2BF0068B497 /* GoogleService-Info.plist */; };
+		88D6D99C1F3AA1FA0008B421 /* MailboxViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 88D6D99B1F3AA1FA0008B421 /* MailboxViewController.swift */; };
+		88D6D99E1F3AA3ED0008B421 /* Mail.swift in Sources */ = {isa = PBXBuildFile; fileRef = 88D6D99D1F3AA3ED0008B421 /* Mail.swift */; };
 		B44B552ACE83392FFC489A8A /* Pods_Study_Buddy.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2F242B4153A45C0D8DC21F3A /* Pods_Study_Buddy.framework */; };
 /* End PBXBuildFile section */
 
@@ -73,6 +75,8 @@
 		88D624EB1F2ECF890068B497 /* Study_BuddyUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Study_BuddyUITests.swift; sourceTree = "<group>"; };
 		88D624ED1F2ECF890068B497 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		88D624FB1F2ED2BF0068B497 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
+		88D6D99B1F3AA1FA0008B421 /* MailboxViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MailboxViewController.swift; sourceTree = "<group>"; };
+		88D6D99D1F3AA3ED0008B421 /* Mail.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Mail.swift; sourceTree = "<group>"; };
 		97FD1AE288788788A11E9853 /* Pods_Study_BuddyTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Study_BuddyTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		BADF2D9EF5E8C967CA7B4A02 /* Pods_Study_BuddyUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Study_BuddyUITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		C18887FC7FAE78083DE6C4BF /* Pods-Study Buddy.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Study Buddy.release.xcconfig"; path = "Pods/Target Support Files/Pods-Study Buddy/Pods-Study Buddy.release.xcconfig"; sourceTree = "<group>"; };
@@ -150,6 +154,8 @@
 				886A462F1F341C2000A4277E /* FindBuddiesViewController.swift */,
 				886A46311F341E1700A4277E /* Buddy.swift */,
 				88D624CF1F2ECF890068B497 /* Main.storyboard */,
+				88D6D99D1F3AA3ED0008B421 /* Mail.swift */,
+				88D6D99B1F3AA1FA0008B421 /* MailboxViewController.swift */,
 				8800321C1F36A6B600ED1DA5 /* BuddyDetailViewController.swift */,
 				8800321A1F36507900ED1DA5 /* CalcViewController.swift */,
 				88D624D21F2ECF890068B497 /* Assets.xcassets */,
@@ -478,11 +484,13 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				88D6D99E1F3AA3ED0008B421 /* Mail.swift in Sources */,
 				880032191F363B2F00ED1DA5 /* StudyRoomViewController.swift in Sources */,
 				886A462C1F32DD9F00A4277E /* ProfileViewController.swift in Sources */,
 				88D624CE1F2ECF890068B497 /* ViewController.swift in Sources */,
 				886A462E1F33F3CB00A4277E /* ChatViewController.swift in Sources */,
 				88D624CC1F2ECF890068B497 /* AppDelegate.swift in Sources */,
+				88D6D99C1F3AA1FA0008B421 /* MailboxViewController.swift in Sources */,
 				8800321B1F36507900ED1DA5 /* CalcViewController.swift in Sources */,
 				886A46321F341E1700A4277E /* Buddy.swift in Sources */,
 				8800321D1F36A6B600ED1DA5 /* BuddyDetailViewController.swift in Sources */,

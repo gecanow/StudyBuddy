@@ -98,17 +98,9 @@
                                 <fontDescription key="fontDescription" type="system" pointSize="24"/>
                                 <state key="normal" title="📪"/>
                                 <connections>
-                                    <action selector="onTappedMailBox:" destination="XZ0-cC-bwU" eventType="touchUpInside" id="Xot-KN-y4t"/>
+                                    <segue destination="8Pq-tc-kEa" kind="show" id="puI-Xg-9jx"/>
                                 </connections>
                             </button>
-                            <label hidden="YES" opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Messages: 0" textAlignment="center" lineBreakMode="wordWrap" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="wYh-jA-pXU">
-                                <rect key="frame" x="207" y="28" width="124" height="37"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <color key="backgroundColor" red="0.065146917880000002" green="0.26596554490000002" blue="0.2621038631" alpha="1" colorSpace="calibratedRGB"/>
-                                <fontDescription key="fontDescription" name="AvenirNextCondensed-Regular" family="Avenir Next Condensed" pointSize="14"/>
-                                <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                                <nil key="highlightedColor"/>
-                            </label>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                     </view>
@@ -117,7 +109,6 @@
                         <outlet property="bio" destination="7IQ-b1-7XF" id="2eB-YI-1Nc"/>
                         <outlet property="bioScrollView" destination="3zK-YY-jYa" id="FS4-9A-B4a"/>
                         <outlet property="email" destination="NXo-DU-RlQ" id="QrF-aQ-W0v"/>
-                        <outlet property="messagesLabel" destination="wYh-jA-pXU" id="tG6-7i-sRO"/>
                         <outlet property="name" destination="umN-0b-033" id="PfY-wj-VMy"/>
                         <outlet property="profileImage" destination="eUi-If-aC3" id="lUi-iT-e65"/>
                         <outlet property="role" destination="S2j-YX-eHV" id="zWe-0b-flv"/>
@@ -126,6 +117,34 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="USA-SC-1SR" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="-436" y="1124.8875562218891"/>
+        </scene>
+        <!--Mailbox View Controller-->
+        <scene sceneID="mBe-ie-8bO">
+            <objects>
+                <viewController storyboardIdentifier="Mailbox" id="8Pq-tc-kEa" customClass="MailboxViewController" customModule="Study_Buddy" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="2FY-ge-1vg"/>
+                        <viewControllerLayoutGuide type="bottom" id="Nx4-nv-92B"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="yNe-ms-fao">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="t5q-7h-7ps">
+                                <rect key="frame" x="0.0" y="0.0" width="200" height="200"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="backgroundColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
+                            </scrollView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    </view>
+                    <connections>
+                        <outlet property="scrollView" destination="t5q-7h-7ps" id="QoY-Fw-iKj"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="CmY-B0-j92" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-436" y="1826"/>
         </scene>
         <!--Calc View Controller-->
         <scene sceneID="HP3-Ky-F2v">

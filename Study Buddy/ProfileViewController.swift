@@ -19,17 +19,12 @@ class ProfileViewController: UIViewController {
     @IBOutlet weak var email: UILabel!
     @IBOutlet weak var bioScrollView: UIScrollView!
     @IBOutlet weak var bio: UILabel!
-    @IBOutlet weak var messagesLabel: UILabel!
     
     override func viewDidLoad() {
         super.viewDidLoad()
         
         name.text = Auth.auth().currentUser?.displayName
         email.text = Auth.auth().currentUser?.email
-    }
-    
-    @IBAction func onTappedMailBox(_ sender: Any) {
-        messagesLabel.isHidden = !messagesLabel.isHidden
     }
     
 }
