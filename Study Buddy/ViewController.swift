@@ -22,13 +22,8 @@ class ViewController: UIViewController, GIDSignInUIDelegate {
         GIDSignIn.sharedInstance().signIn()
     }
     
-    @IBAction func onTappedLogOut(_ sender: Any) {
-        let firebaseAuth = Auth.auth()
-        do {
-            try firebaseAuth.signOut()
-        } catch let signOutError as NSError {
-            print ("Error signing out: %@", signOutError)
-        }
+    @IBAction func unwindToStart(segue: UIStoryboardSegue) {
+        //unwind
     }
 }
 
