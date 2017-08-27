@@ -20,8 +20,10 @@ class ChatViewController: JSQMessagesViewController {
     lazy var outgoingBubbleImageView: JSQMessagesBubbleImage = self.setupOutgoingBubble()
     lazy var incomingBubbleImageView: JSQMessagesBubbleImage = self.setupIncomingBubble()
     
-    private lazy var messageRef: DatabaseReference! = self.ref.child("chatChannel").child((Auth.auth().currentUser?.uid)!)
+    private var messageRef: DatabaseReference!
     private var newMessageRefHandle: DatabaseHandle?
+    
+    var isConnected = false
     
     //=======================================
     // VIEW DID LOAD
@@ -29,10 +31,28 @@ class ChatViewController: JSQMessagesViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
+        //messageRef = self.ref.child("chatChannel").child((Auth.auth().currentUser?.uid)!)
+        
+        self.ref.child("user").child((Auth.auth().currentUser?.uid)!).observe(.childAdded, with: { (snapshot) -> Void in
+            // not sure why this only returns the chatChannelID -- could be a bug in future 
+            // versions so look out
+            
+            if let chatChannelID = snapshot.value as! String! {
+                self.messageRef = self.ref.child("chatChannel").child(chatChannelID)
+                self.isConnected = true
+            } else {
+                print("Oops! You are not connected with anyone and shouldn't be using the chat function!")
+                self.isConnected = false
+            }
+        })
+        
         self.senderDisplayName = Auth.auth().currentUser?.displayName
         self.senderId = Auth.auth().currentUser?.uid
         self.addViewOnTop()
-        self.observeMessages()
+        
+        if isConnected {
+            self.observeMessages()
+        }
     }
     
     func addViewOnTop() {

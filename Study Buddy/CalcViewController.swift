@@ -34,6 +34,7 @@ class CalcViewController: UIViewController {
     @IBAction func tappedDot(_ sender: Any) {
         if equation.count > 0 {
             equation[equation.count-1] = equation[equation.count-1] + "."
+            updateText()
             lastWasOperator = false
         }
     }

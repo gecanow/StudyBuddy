@@ -13,20 +13,62 @@
         <scene sceneID="obz-wH-kQW">
             <objects>
                 <viewController id="wuI-Pv-tsp" customClass="ViewController" customModule="Study_Buddy" customModuleProvider="target" sceneMemberID="viewController">
-                    <label key="view" opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="L4a-aE-UD3">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="ol8-Ig-KL9"/>
+                        <viewControllerLayoutGuide type="bottom" id="R99-br-JsY"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="8hL-87-SNn">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                        <nil key="textColor"/>
-                        <nil key="highlightedColor"/>
-                    </label>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Study Buddy" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="21a-ve-RTr">
+                                <rect key="frame" x="16" y="20" width="343" height="55"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" name="AvenirNextCondensed-Regular" family="Avenir Next Condensed" pointSize="40"/>
+                                <color key="textColor" red="0.065146917880000002" green="0.26596554490000002" blue="0.2621038631" alpha="1" colorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="with Google Sign In" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="P5F-1F-SVo">
+                                <rect key="frame" x="16" y="75" width="343" height="26"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" name="AvenirNextCondensed-UltraLightItalic" family="Avenir Next Condensed" pointSize="23"/>
+                                <color key="textColor" red="0.065146917880000002" green="0.26596554490000002" blue="0.2621038631" alpha="1" colorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="RMd-l8-KIh">
+                                <rect key="frame" x="67" y="109" width="238" height="56"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <subviews>
+                                    <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="eA9-xH-4PR" customClass="GIDSignInButton">
+                                        <rect key="frame" x="4" y="4" width="230" height="48"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                        <connections>
+                                            <action selector="onTappedSignIn:" destination="wuI-Pv-tsp" eventType="touchUpInside" id="pPz-av-Rdm"/>
+                                        </connections>
+                                    </view>
+                                </subviews>
+                                <color key="backgroundColor" red="0.065146917880000002" green="0.26596554490000002" blue="0.2621038631" alpha="1" colorSpace="calibratedRGB"/>
+                            </view>
+                            <segmentedControl opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" segmentControlStyle="plain" selectedSegmentIndex="0" translatesAutoresizingMaskIntoConstraints="NO" id="Htx-lO-vHC">
+                                <rect key="frame" x="67" y="173" width="238" height="29"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <segments>
+                                    <segment title="Student"/>
+                                    <segment title="Tutor"/>
+                                </segments>
+                                <color key="tintColor" red="0.065146917880000002" green="0.26596554490000002" blue="0.2621038631" alpha="1" colorSpace="calibratedRGB"/>
+                            </segmentedControl>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    </view>
                     <connections>
                         <segue destination="Ii2-33-HqZ" kind="show" identifier="StudyRoomSegue" id="afM-Mu-mEO"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="EFX-ap-vop" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-1145" y="439"/>
+            <point key="canvasLocation" x="-1146.4000000000001" y="438.53073463268368"/>
         </scene>
         <!--Profile-->
         <scene sceneID="yeW-fQ-xTj">
@@ -101,6 +143,14 @@
                                     <segue destination="8Pq-tc-kEa" kind="show" id="puI-Xg-9jx"/>
                                 </connections>
                             </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="JPZ-LL-ynW">
+                                <rect key="frame" x="42" y="193" width="62" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="Change"/>
+                                <connections>
+                                    <action selector="onTappedChangeProfile:" destination="XZ0-cC-bwU" eventType="touchUpInside" id="bJ7-iJ-GKf"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                     </view>
@@ -115,6 +165,7 @@
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="USA-SC-1SR" userLabel="First Responder" sceneMemberID="firstResponder"/>
+                <pongPressGestureRecognizer allowableMovement="10" minimumPressDuration="0.5" id="2IH-H5-Qli"/>
             </objects>
             <point key="canvasLocation" x="-436" y="1124.8875562218891"/>
         </scene>
@@ -144,7 +195,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="CmY-B0-j92" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-436" y="1826"/>
+            <point key="canvasLocation" x="-436" y="1866"/>
         </scene>
         <!--Calc View Controller-->
         <scene sceneID="HP3-Ky-F2v">
@@ -811,6 +862,7 @@
                     </view>
                     <tabBarItem key="tabBarItem" title="Study Room" id="KXQ-fL-x82"/>
                     <connections>
+                        <outlet property="welcomeLabel" destination="Wye-ur-agg" id="Cx1-Nb-bjf"/>
                         <segue destination="UDq-Qj-PSH" kind="unwind" identifier="logOutSegue" unwindAction="unwindToStartWithSegue:" id="AdF-F7-tb8"/>
                     </connections>
                 </viewController>

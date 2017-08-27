@@ -19,8 +19,13 @@ class ViewController: UIViewController, GIDSignInUIDelegate {
         
         
         GIDSignIn.sharedInstance().uiDelegate = self
+        //GIDSignIn.sharedInstance().signIn()
+    }
+    
+    @IBAction func onTappedSignIn(_ sender: Any) {
         GIDSignIn.sharedInstance().signIn()
     }
+    
     
     @IBAction func unwindToStart(segue: UIStoryboardSegue) {
         //unwind

@@ -31,7 +31,7 @@ class BuddyDetailViewController: UIViewController {
             let messageItem = [
                 "senderId": Auth.auth().currentUser?.uid,
                 "senderName": Auth.auth().currentUser?.displayName,
-                "text": "would like to connect with you!",
+                "text": "\(Auth.auth().currentUser?.displayName) wants to connect!",
                 ]
             
             itemRef.setValue(messageItem)
